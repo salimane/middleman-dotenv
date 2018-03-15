@@ -9,7 +9,7 @@ module Middleman
         env = options.env
         ::Dotenv.load File.join(app.root, env)
         app.before do
-          ::Dotenv.load File.join(self.root, env)
+          ::Dotenv.load File.join(app.root, env)
         end
       end
     end
